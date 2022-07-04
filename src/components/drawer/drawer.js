@@ -1,16 +1,18 @@
-import { Divider, IconButton, List, ListItem, ListItemButton} from "@mui/material";
+import React from 'react';
+import { NavLink } from "react-router-dom";
+
+import { Divider, IconButton, List, ListItem, ListItemButton, ListItemText} from "@mui/material";
 import MuiDrawer from '@mui/material/Drawer';
 import { styled } from "@mui/system";
-import React from 'react';
+
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItemText from '@mui/material/ListItemText';
-import { listItemsBottom, listItemsTop } from "./senderdrawerlist";
-import { NavLink } from "react-router-dom";
-import Logo from "../../assets/images/logos/940 air cargo logo.png"
+
+import { listItemsBottom, listItemsTop } from "./drawerlist";
+import Logo from "../../assets/images/logos/logo.png"
 
 
-const drawerWidth = 350;
+const drawerWidth = "18vw";
 
 // open drawer mixin
 const openedMixin = (theme) => ({
@@ -29,6 +31,7 @@ const LogoItem = styled("img")(({theme}) => ({
 	marginBottom: "20px",
 	margin: "20px auto"
 }))
+
 
 // close drawer mixing
 const closedMixin = (theme) => ({
@@ -88,7 +91,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 		}),
   );
 
-const RightSideDrawer = ({open, handleDrawerOpen, handleDrawerClose, theme}) => {
+const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => {
 	return (
 		<Drawer
 			anchor="left"
@@ -97,7 +100,7 @@ const RightSideDrawer = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 			PaperProps={{
 				sx: {
 					backgroundColor: "white",
-                    color: "black"
+					color: "black"
 				  }
 			}}
 		>
@@ -110,7 +113,7 @@ const RightSideDrawer = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 
 			<List >
 				<ListItem>
-					<LogoItem src={Logo} alt="Rhino John Prime Metal Logo"/>
+					<LogoItem src={Logo} alt="940 air cargo"/>
 				</ListItem>
 			
 
@@ -154,7 +157,8 @@ const RightSideDrawer = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 								}}
 							>
 								{el.icon}
-								<ListItemText primary={el.label} sx={{ opacity: open ? 1 : 0 , marginLeft: "15px"}} />
+								<ListItemText primary={el.label} sx={{ opacity: open ? 1 : 0 , marginLeft: "15px", padding: "30px auto"}} />
+								<Divider/>
 
 							</ListItemButton>
 						</NavLink>
@@ -167,4 +171,4 @@ const RightSideDrawer = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 	)
 }
 
-export default RightSideDrawer
+export default DrawerComponent
