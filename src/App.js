@@ -8,7 +8,8 @@ import LandingUI from "./layout/ui/landing/landingui";
 import Home from "./pages/landing/home/home";
 
 import TeacherUI from "./layout/ui/teacher/teacher";
-import Teacher from "./pages/teacher/teacher";
+import TeacherHome from "./pages/teacher/home/teacherhome";
+import Profile from "./pages/teacher/profile/profile";
 
 const App = () =>  {
 	return (
@@ -19,8 +20,9 @@ const App = () =>  {
 						<Route path="/home" element={<Home/>}/>
 					</Route>
 
-					<Route path="/teacher" element={<TeacherUI/>}>
-						<Route path="/teacher/home" element={<Teacher/>}/>
+					<Route path="/admin/teacher" element={<TeacherUI/>}>
+						<Route path="/admin/teacher/home" element={<TeacherHome/>}/>
+						<Route path="/admin/teacher/profile" element={<Profile/>}/>
 					</Route>
 				</Routes>
 			</ThemeProvider>
