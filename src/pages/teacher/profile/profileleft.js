@@ -9,7 +9,7 @@ import { profileLeftList } from "./profilecontent";
 const StyledProfileCard = styled(Box)(({ theme }) => ({
 	minHeight: "70vh",
 	borderRadius: theme.shape.default,
-	backgroundColor: theme.palette.common.white,
+	backgroundColor: theme.palette.background.paper,
 	position: "relative",
 	zIndex: 3,
 	marginTop: "-15vh",

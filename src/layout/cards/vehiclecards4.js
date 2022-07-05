@@ -6,7 +6,7 @@ import { styled } from "@mui/system";
 import StarIcon from '@mui/icons-material/Star';
 
 const StyledVehicleCardsContainer = styled(Box)(({ theme }) => ({
-	backgroundColor: "#fff",
+	backgroundColor: theme.palette.background.paper,
 	height: "35vh",
 	borderRadius: theme.shape.default,
 }))
@@ -29,7 +29,7 @@ const StyledImageContainer = styled(Box)(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	backgroundColor: "grey",
+	backgroundColor: theme.palette.background.paper,
 	marginBottom: "10px"
 }))
 

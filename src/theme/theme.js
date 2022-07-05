@@ -5,7 +5,7 @@ export const theme = createTheme({
 
 	palette: {
 		primary: {
-			main: "rgba(238, 193, 45, 1)",
+			main: "rgba(238, 193, 3, 1)",
 			dark: "rgba(221, 172, 12, 1)",
 			light: "rgba(255, 199, 15, 1)"
 		},
@@ -15,23 +15,24 @@ export const theme = createTheme({
 			light: "rgba(0, 153, 234, 1)"
 		},
 		text: {
-			primary: "#222222",
+			primary: "grey",
 			secondary: "#737373",
 			disabled: "#6f8ba4"
 		},
 		background: {
-			paper: "#edf5ff",
-			default: "#edf5ff"
+			paper: "rgba(43,43,43,255)",
+			default: "rgba(30,31,31,255)",
+			dark: "rgba(22,23,22,255)"
 		},
-		// divider: "rgba(238, 193, 45, 1)"
 	},
 	shape: {
-		default: 5,
+		default: 3,
 		rounded: 10
 	},
 	
 	typography: {
-		fontFamily: "'Mingzat', sans-serif",
+		// fontFamily: "'Mingzat', sans-serif",
+		fontFamily: "'Fira Sans', sans-serif",
 		h1: {
 			fontFamily: "'Fira Sans', sans-serif",
 			fontWeight: 700,

@@ -16,12 +16,12 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
-const drawerWidth = "18vw";
+const drawerWidth = "15vw";
 
 const AppBarWrapper = styled(MuiAppBar, {
 			shouldForwardProp: (prop) => prop !== 'open',
 		})(({ theme, open }) => ({
-			backgroundColor: theme.palette.common.white,
+			backgroundColor: "rgba(9, 9, 9, 1)",
 			color: "grey",
 			padding: "10px",
 			zIndex: theme.zIndex.drawer + 1,

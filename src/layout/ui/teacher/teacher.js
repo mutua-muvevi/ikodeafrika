@@ -7,6 +7,7 @@ import { styled } from "@mui/system";
 
 import TeacherDrawer from '../../../components/drawer/drawer';
 import PrimarySearchAppBar from '../../../components/topbar/topbar';
+import DashFooter from "../../../components/dashfooter";
 
 
 const Main = styled(Box)(({theme}) => ({
@@ -50,6 +51,7 @@ const TeacherUI = () => {
 				<Main component="main" sx={{ flexGrow: 1, p: 3 , width: "100%"}}>
 					<DrawerHeader/>
 					<Outlet/>
+					<DashFooter/>
 				</Main>
 			</Box>
 		</Fade>
