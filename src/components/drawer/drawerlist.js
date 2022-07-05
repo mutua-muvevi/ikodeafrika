@@ -1,7 +1,12 @@
 import HomeIcon from '@mui/icons-material/Home';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import ArticleIcon from '@mui/icons-material/Article';
-import MapIcon from '@mui/icons-material/Map';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
+import SchoolIcon from '@mui/icons-material/School';
+import PeopleIcon from '@mui/icons-material/People';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import SnippetFolderIcon from '@mui/icons-material/SnippetFolder';
 
 import SettingsIcon from '@mui/icons-material/Settings';
 import SettingsPowerIcon from '@mui/icons-material/SettingsPower';
@@ -14,43 +19,83 @@ const sx= {
 
 export const listItemsTop = [
 	{
-		label: "Dashboard",
-		path: "/admin/sender/home",
+		label: "Home",
+		path: "/admin/teacher/home",
 		icon: <HomeIcon sx={sx}/>,
 		nested: [
 			{}
 		],
 	},
 	{
-		label: "Tracking",
-		path: "/admin/sender/tracking",
-		icon: <MapIcon sx={sx}/>,
+		label: "Courses",
+		path: "/admin/teacher/courses",
+		icon: <SchoolIcon sx={sx}/>,
 		nested: [
 			{}
 		],
 	},
 	{
-		label: "History",
-		path: "/admin/sender/analitics",
-		icon: <AccessTimeIcon sx={sx}/>,
+		label: "Students",
+		path: "/admin/teacher/students",
+		icon: <PeopleIcon sx={sx}/>,
 		nested: [
 			{}
 		],
 	},
 	{
-		label: "Order",
-		path: "/admin/sender/order",
-		icon:  <ArticleIcon sx={sx}/>,
+		label: "Assignments",
+		path: "/admin/teacher/assignments",
+		icon: <ArticleIcon sx={sx}/>,
 		nested: [
 			{}
 		],
-	}
+	},
+	{
+		label: "Certificate",
+		path: "/admin/teacher/certificate",
+		icon: <EmojiEventsIcon sx={sx}/>,
+		nested: [
+			{}
+		],
+	},
+	{
+		label: "Report",
+		path: "/admin/teacher/report",
+		icon:  <AnalyticsIcon sx={sx}/>,
+		nested: [
+			{}
+		],
+	},
+	{
+		label: "Classroom",
+		path: "/admin/teacher/classroom",
+		icon:  <LaptopMacIcon sx={sx}/>,
+		nested: [
+			{}
+		],
+	},
+	{
+		label: "Tools",
+		path: "/admin/teacher/tools",
+		icon:  <ConstructionIcon sx={sx}/>,
+		nested: [
+			{}
+		],
+	},
+	{
+		label: "Resources",
+		path: "/admin/teacher/resources",
+		icon:  <SnippetFolderIcon sx={sx}/>,
+		nested: [
+			{}
+		],
+	},
 ]
 
 export const listItemsBottom = [
 	{
 		label: "Profile",
-		path: "/admin/sender/profile",
+		path: "/admin/teacher/profile",
 		icon:  <SettingsIcon sx={sx}/>,
 		nested: [
 			{}
