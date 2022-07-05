@@ -5,7 +5,7 @@ import { styled } from "@mui/system";
 
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
-// import moment from "moment"
+import moment from "moment";
 import { footerContent, footerSocialIcons } from "./footercontent";
 
 const StyledTopContainer = styled(Box)(({ theme }) => ({
@@ -111,7 +111,7 @@ const Footer = () => {
 				<Container>
 					<StyledCopyrightItems>
 						<Typography variant="body1">
-							{/* Copyright {moment().format("YYYY")} */}
+							Copyright {moment().format("YYYY")}
 						</Typography>
 						<Box>
 							{

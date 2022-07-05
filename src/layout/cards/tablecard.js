@@ -5,7 +5,7 @@ import { styled } from "@mui/system";
 
 
 const StyledCardWrapper = styled(Box)(({ theme }) => ({
-	backgroundColor: "#fff",
+	backgroundColor: theme.palette.background.paper,
 	height: "100%",
 	borderRadius: theme.shape.default,
 }))

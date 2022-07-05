@@ -25,7 +25,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 
 const navbarSX = {
-	backgroundColor: "white",
+	backgroundColor: "rgba(9, 9, 9, 1)",
 	color: "primary",
 }
 

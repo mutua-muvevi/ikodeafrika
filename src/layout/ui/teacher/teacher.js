@@ -5,12 +5,13 @@ import { Box, CssBaseline, Fade} from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { styled } from "@mui/system";
 
-import SenderDrawer from '../../../components/drawer/drawer';
+import TeacherDrawer from '../../../components/drawer/drawer';
 import PrimarySearchAppBar from '../../../components/topbar/topbar';
+import DashFooter from "../../../components/dashfooter";
 
 
 const Main = styled(Box)(({theme}) => ({
-	backgroundColor: theme.background.default,
+	backgroundColor: theme.palette.background.default,
 	minHeight: "100vh"
 }))
 
@@ -43,13 +44,14 @@ const TeacherUI = () => {
 		<Fade in timeout={1000}>
 			<Box sx={{ display: 'flex' }}>
 				<CssBaseline />
-				<SenderDrawer handleDrawerOpen={handleDrawerOpen} open={open} theme={theme} handleDrawerClose={handleDrawerClose}/>
+				<TeacherDrawer handleDrawerOpen={handleDrawerOpen} open={open} theme={theme} handleDrawerClose={handleDrawerClose}/>
 
 				<PrimarySearchAppBar handleDrawerOpen={handleDrawerOpen} open={open}/>
 
 				<Main component="main" sx={{ flexGrow: 1, p: 3 , width: "100%"}}>
 					<DrawerHeader/>
 					<Outlet/>
+					<DashFooter/>
 				</Main>
 			</Box>
 		</Fade>

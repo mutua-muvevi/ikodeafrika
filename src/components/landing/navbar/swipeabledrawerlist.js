@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 
 
 const StyledLogoListItem = styled(List)(({theme}) => ({
-	backgroundColor: theme.palette.common.white
+	backgroundColor: theme.palette.background.default
 }))
 
 const LogoParent = styled(ListItem)(({theme}) => ({

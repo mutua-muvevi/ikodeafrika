@@ -12,7 +12,7 @@ import { listItemsBottom, listItemsTop } from "./drawerlist";
 import Logo from "../../assets/images/logos/logo.png"
 
 
-const drawerWidth = "18vw";
+const drawerWidth = "15vw";
 
 // open drawer mixin
 const openedMixin = (theme) => ({
@@ -60,26 +60,24 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const navlinkStyle = {
 	textDecoration: "none",
-	color: "black"
+	color: "grey"
 }
 
 const activeNavlink={
 	textDecoration: "none",
-	color: "#1976d2",
+	color: "rgba(221, 172, 12, 1)",
 	borderTopLeftRadius: "20px",
 	borderBottomLeftRadius: "20px",
-	background: "white !important"
 }
 
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
 	({ theme, open }) => ({
-		color: theme.palette.common.black,
+		// color: theme.palette.common.black,
 		width: drawerWidth,
 		flexShrink: 0,
 		whiteSpace: 'nowrap',
 		boxSizing: 'border-box',
-		backgroundColor: "#131313 !important",
 		...(open && {
 			...openedMixin(theme),
 			'& .MuiDrawer-paper': openedMixin(theme),
@@ -88,10 +86,15 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 			...closedMixin(theme),
 			'& .MuiDrawer-paper': closedMixin(theme),
 		}),
-		}),
-  );
-
+	}),
+	);
+	
 const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => {
+	const defaultListItemText = { 
+		opacity: open ? 1 : 0 , 
+		marginLeft: "15px",
+	}
+
 	return (
 		<Drawer
 			anchor="left"
@@ -99,8 +102,8 @@ const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 			variant="permanent"
 			PaperProps={{
 				sx: {
-					backgroundColor: "white",
-					color: "black"
+					backgroundColor: "rgba(20, 21, 21, 1)",
+					color: "grey"
 				  }
 			}}
 		>
@@ -133,7 +136,7 @@ const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 								}}
 							>
 								{el.icon}
-								<ListItemText primary={el.label} sx={{ opacity: open ? 1 : 0 , marginLeft: "15px"}} />
+								<ListItemText primary={el.label} sx={defaultListItemText} />
 
 							</ListItemButton>
 						</NavLink>
@@ -157,7 +160,7 @@ const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 								}}
 							>
 								{el.icon}
-								<ListItemText primary={el.label} sx={{ opacity: open ? 1 : 0 , marginLeft: "15px", padding: "30px auto"}} />
+								<ListItemText primary={el.label} sx={defaultListItemText} />
 								<Divider/>
 
 							</ListItemButton>
