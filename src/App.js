@@ -16,6 +16,8 @@ import TeachersReport from "./pages/teacher/report/report";
 import Classroom from "./pages/teacher/classroom/classroom";
 import Resources from "./pages/teacher/resources/resources";
 import Tools from "./pages/teacher/tools/tools";
+import Assignments from "./pages/teacher/assignments/assignments";
+import Certificates from "./pages/teacher/certificates/certificates";
 
 const App = () =>  {
 	return (
@@ -29,11 +31,11 @@ const App = () =>  {
 					<Route path="/admin/teacher" element={<TeacherUI/>}>
 						<Route path="/admin/teacher/home" element={<TeacherHome/>}/>
 						<Route path="/admin/teacher/courses" element={<Courses/>}/>
-						<Route path="/admin/teacher/assignments" element={<TeachersReport/>}/>
+						<Route path="/admin/teacher/assignments" element={<Assignments/>}/>
 						<Route path="/admin/teacher/students" element={<Students/>}/>
 						<Route path="/admin/teacher/resources" element={<Resources/>}/>
 						<Route path="/admin/teacher/report" element={<TeachersReport/>}/>
-						<Route path="/admin/teacher/certificate" element={<TeachersReport/>}/>
+						<Route path="/admin/teacher/certificate" element={<Certificates/>}/>
 						<Route path="/admin/teacher/classroom" element={<Classroom/>}/>
 						<Route path="/admin/teacher/tools" element={<Tools/>}/>
 						<Route path="/admin/teacher/profile" element={<Profile/>}/>

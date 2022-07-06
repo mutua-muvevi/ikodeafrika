@@ -1,14 +1,9 @@
-import HomeIcon from '@mui/icons-material/Home';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import { FaAward, FaGraduationCap, FaHome, FaLaptopCode, FaPowerOff, FaUserCog, FaUserGraduate } from "react-icons/fa";
+import { BsTools } from "react-icons/bs";
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import ArticleIcon from '@mui/icons-material/Article';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
-import SchoolIcon from '@mui/icons-material/School';
-import PeopleIcon from '@mui/icons-material/People';
-import ConstructionIcon from '@mui/icons-material/Construction';
 import SnippetFolderIcon from '@mui/icons-material/SnippetFolder';
 
-import SettingsIcon from '@mui/icons-material/Settings';
 import SettingsPowerIcon from '@mui/icons-material/SettingsPower';
 
 const sx= {
@@ -21,7 +16,7 @@ export const listItemsTop = [
 	{
 		label: "Home",
 		path: "/admin/teacher/home",
-		icon: <HomeIcon sx={sx}/>,
+		icon: <FaHome style={sx}/>,
 		nested: [
 			{}
 		],
@@ -29,7 +24,7 @@ export const listItemsTop = [
 	{
 		label: "Courses",
 		path: "/admin/teacher/courses",
-		icon: <SchoolIcon sx={sx}/>,
+		icon: <FaGraduationCap style={sx}/>,
 		nested: [
 			{}
 		],
@@ -37,7 +32,7 @@ export const listItemsTop = [
 	{
 		label: "Students",
 		path: "/admin/teacher/students",
-		icon: <PeopleIcon sx={sx}/>,
+		icon: <FaUserGraduate style={sx}/>,
 		nested: [
 			{}
 		],
@@ -45,7 +40,7 @@ export const listItemsTop = [
 	{
 		label: "Assignments",
 		path: "/admin/teacher/assignments",
-		icon: <ArticleIcon sx={sx}/>,
+		icon: <FaLaptopCode style={sx}/>,
 		nested: [
 			{}
 		],
@@ -53,7 +48,7 @@ export const listItemsTop = [
 	{
 		label: "Certificate",
 		path: "/admin/teacher/certificate",
-		icon: <EmojiEventsIcon sx={sx}/>,
+		icon: <FaAward style={sx}/>,
 		nested: [
 			{}
 		],
@@ -61,7 +56,7 @@ export const listItemsTop = [
 	{
 		label: "Report",
 		path: "/admin/teacher/report",
-		icon:  <AnalyticsIcon sx={sx}/>,
+		icon:  <AnalyticsIcon style={sx}/>,
 		nested: [
 			{}
 		],
@@ -69,7 +64,7 @@ export const listItemsTop = [
 	{
 		label: "Classroom",
 		path: "/admin/teacher/classroom",
-		icon:  <LaptopMacIcon sx={sx}/>,
+		icon:  <LaptopMacIcon style={sx}/>,
 		nested: [
 			{}
 		],
@@ -77,7 +72,7 @@ export const listItemsTop = [
 	{
 		label: "Tools",
 		path: "/admin/teacher/tools",
-		icon:  <ConstructionIcon sx={sx}/>,
+		icon:  <BsTools style={sx}/>,
 		nested: [
 			{}
 		],
@@ -85,7 +80,7 @@ export const listItemsTop = [
 	{
 		label: "Resources",
 		path: "/admin/teacher/resources",
-		icon:  <SnippetFolderIcon sx={sx}/>,
+		icon:  <SnippetFolderIcon style={sx}/>,
 		nested: [
 			{}
 		],
@@ -96,7 +91,7 @@ export const listItemsBottom = [
 	{
 		label: "Profile",
 		path: "/admin/teacher/profile",
-		icon:  <SettingsIcon sx={sx}/>,
+		icon:  <FaUserCog style={sx}/>,
 		nested: [
 			{}
 		],
@@ -104,7 +99,7 @@ export const listItemsBottom = [
 	{
 		label: "Logout",
 		path: "#",
-		icon:  <SettingsPowerIcon sx={sx}/>,
+		icon:  <FaPowerOff style={sx}/>,
 		nested: [
 			{}
 		],
