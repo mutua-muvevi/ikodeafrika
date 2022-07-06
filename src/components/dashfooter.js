@@ -12,7 +12,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
 const IconStyle = { 
-	color: "grey" 
+	color: "rgba(171, 171, 171, 1)" 
 }
 
 const footerSocialIcons = [
@@ -35,7 +35,7 @@ const footerSocialIcons = [
 ]
 
 const StyledCopyRight = styled(Box)(({theme}) => ({
-	color: "grey",
+	color: "rgba(171, 171, 171, 1)",
 	marginTop: "20px"
 }))
 

@@ -11,7 +11,6 @@ const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
 	[`&.${tableCellClasses.head}`]: {
 		backgroundColor: "#242c64",
-		// backgroundColor: "grey",
 		color: theme.palette.common.white,
 	},
 	[`&.${tableCellClasses.body}`]: {

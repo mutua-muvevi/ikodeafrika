@@ -60,7 +60,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const navlinkStyle = {
 	textDecoration: "none",
-	color: "grey"
+	color: "rgba(171, 171, 171, 1)"
 }
 
 const activeNavlink={
@@ -103,7 +103,7 @@ const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 			PaperProps={{
 				sx: {
 					backgroundColor: "rgba(20, 21, 21, 1)",
-					color: "grey"
+					color: "rgba(171, 171, 171, 1)"
 				  }
 			}}
 		>
@@ -142,7 +142,7 @@ const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 						</NavLink>
 					))
 				}
-				<Divider color="grey"/>
+				<Divider color="rgba(171, 171, 171, 1)"/>
 
 				{
 					listItemsBottom.map((el, index) => (

@@ -14,7 +14,7 @@ const StyledGridWrapper = styled(Grid)(({ theme }) => ({
 const StyledGrid = styled(Grid)(({ theme }) => ({
 	width: "100%",
 	height: "100%",
-	borderRight: "1px solid grey",
+	borderRight: "1px solid rgba(171, 171, 171, 1)",
 }))
 
 

@@ -15,7 +15,7 @@ export const theme = createTheme({
 			light: "rgba(0, 153, 234, 1)"
 		},
 		text: {
-			primary: "grey",
+			primary: "rgba(171, 171, 171, 1)",
 			secondary: "#737373",
 			disabled: "#6f8ba4"
 		},
