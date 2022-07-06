@@ -30,7 +30,7 @@ const styledBoxTop = {
 
 
 const styledDetailsText = {
-	color: "grey",
+	color: "rgba(171, 171, 171, 1)",
 	lineHeight: "0px"
 }
 

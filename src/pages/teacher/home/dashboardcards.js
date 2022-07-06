@@ -3,8 +3,8 @@ import React from 'react';
 import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/system"
 
-import VehicleCards4 from "../../../layout/cards/vehiclecards4";
-import { vehicleCards } from "./vehiclecardsinfo";
+import DashboardCards from "../../../layout/cards/dashboardcards";
+import { dashboardCards } from "./dashboardcardsinfo";
 
 const StyledCardsContainer = styled(Box)(({ theme }) => ({
 	marginBottom: "10px"
@@ -15,9 +15,9 @@ const VehicleCards = () => {
 		<StyledCardsContainer>
 			<Grid container spacing={2}>
 				{
-					vehicleCards.map((card, i) => (
-						<Grid item lg={3} md={4} sm={6} xs={12}>
-							<VehicleCards4 item={card}/>
+					dashboardCards.map((card, i) => (
+						<Grid key={i} item lg={4} md={4} sm={12} xs={12}>
+							<DashboardCards item={card}/>
 						</Grid>
 					))
 				}

@@ -22,7 +22,7 @@ const AppBarWrapper = styled(MuiAppBar, {
 			shouldForwardProp: (prop) => prop !== 'open',
 		})(({ theme, open }) => ({
 			backgroundColor: "rgba(9, 9, 9, 1)",
-			color: "grey",
+			color: "rgba(171, 171, 171, 1)",
 			padding: "10px",
 			zIndex: theme.zIndex.drawer + 1,
 			transition: theme.transitions.create(['width', 'margin'], {
@@ -55,7 +55,7 @@ const Search = styled('div')(({ theme }) => ({
 		marginLeft: theme.spacing(3),
 		width: 'auto',
 	},
-	color: "grey"
+	color: "rgba(171, 171, 171, 1)"
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -66,11 +66,11 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
-	color: "grey"
+	color: "rgba(171, 171, 171, 1)"
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-	color: "grey",
+	color: "rgba(171, 171, 171, 1)",
 	'& .MuiInputBase-input': {
 		padding: theme.spacing(1.5, 1.5, 1.5, 0),
 		// vertical padding + font size from searchIcon

@@ -32,7 +32,7 @@ const TableCard = () => {
 		<StyledCardWrapper  sx={{ boxShadow: 5}}>
 			<StyledCardTop>
 				<Typography variant="h4" style={titleStyle}>
-					Table title
+					Monthly enrollment
 				</Typography>
 			</StyledCardTop>
 			<Divider/>

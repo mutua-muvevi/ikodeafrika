@@ -150,7 +150,7 @@ const VehicleInfo = () => {
 					value={4.5}
 					readOnly
 					precision={0.5}
-					emptyIcon={<StarIcon style={{ opacity: 0.55, color: "grey" }} fontSize="inherit" />}
+					emptyIcon={<StarIcon style={{ opacity: 0.55, color: "rgba(171, 171, 171, 1)" }} fontSize="inherit" />}
 					/>
 			</StyledRating>
 		</StyledContainerWrapper>

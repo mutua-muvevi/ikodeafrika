@@ -32,7 +32,7 @@ const PiechartCard = () => {
 		<StyledCardWrapper sx={{ boxShadow: 5}}>
 			<StyledCardTop>
 				<Typography style={titleStyle} variant="body">
-					vehicle types used
+					certified vs all
 				</Typography>
 			</StyledCardTop>
 			<Divider/>

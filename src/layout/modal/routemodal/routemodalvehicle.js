@@ -57,7 +57,7 @@ const StyledSmallCardsWrapper = styled(Grid)(({ theme }) => ({
 }))
 
 const StyledSmallCards = styled(Grid)(({ theme }) => ({
-	backgroundColor: "grey",
+	backgroundColor: "rgba(171, 171, 171, 1)",
 	borderRadius: theme.shape.default,
 	marginRight: "10px"
 }))
@@ -67,7 +67,7 @@ const RouteModalVehicle = () => {
 		<StyledTruckBox>
 			<Container maxWidth="xl">
 				<StyledVehicleTitle>
-						<Typography variant="h3" style={{ color: "grey"}}>
+						<Typography variant="h3" style={{ color: "rgba(171, 171, 171, 1)"}}>
 							ID: 204572458
 						</Typography>
 						<StyledButtonsContainer>
