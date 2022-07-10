@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { theme } from "./theme/theme"
@@ -19,7 +19,15 @@ import Tools from "./pages/teacher/tools/tools";
 import Assignments from "./pages/teacher/assignments/assignments";
 import Certificates from "./pages/teacher/certificates/certificates";
 
-const App = () =>  {
+import { connect } from "react-redux"
+import { getCourses } from "./redux/courses/coursesaction";
+
+const App = ({ getCourses }) =>  {
+
+	useEffect(() => {
+		getCourses()
+	}, [])
+
 	return (
 		<Router>
 			<ThemeProvider theme={theme}>
@@ -46,4 +54,21 @@ const App = () =>  {
 	);
 }
 
-export default App;
+const mapStateToProps = () => ({
+
+})
+
+const mapDispatchToProps = (dispatch) => ({
+	// fetchUser: (token) => dispatch(fetchUser(token)),
+	// fetchAllUsers: (token) => dispatch(fetchAllUsers(token)),
+	// fetchAllAdmin: (token) => dispatch(fetchAllAdmin(token)),
+
+	getCourses: () => dispatch(getCourses()),
+	// getStorage: (token) => dispatch(getStorage(token)),
+
+	// getQuotation : (token) => dispatch(getQuotation(token)),
+	// getEmail: (token) => dispatch(getEmail(token)),
+
+	// getBlogs: () => dispatch(getBlogs())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(App);
