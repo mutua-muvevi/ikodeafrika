@@ -5,7 +5,9 @@ import { Box, Breadcrumbs, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { FaHome } from "react-icons/fa";
-import { FaGraduationCap } from "react-icons/fa";
+
+import Courses3Cards from "./courses3cards";
+import CoursesSection from "./coursessection";
 
 
 const StyledBreadCrumbs = styled(Breadcrumbs)(({theme}) => ({
@@ -35,10 +37,13 @@ const Courses = () => {
 					sx={{ display: 'flex', alignItems: 'center' }}
 					color="text.primary"
 				>
-					<FaGraduationCap style={{ marginRight: "10px" }} fontSize="inherit" />
-					Courses
+					
+
 				</Typography>
 			</StyledBreadCrumbs>
+			
+			<Courses3Cards/>
+			<CoursesSection/>
 		</Box>
 	)
 }
