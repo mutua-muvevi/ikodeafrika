@@ -26,7 +26,7 @@ const App = ({ getCourses }) =>  {
 
 	useEffect(() => {
 		getCourses()
-	}, [])
+	}, [ getCourses ])
 
 	return (
 		<Router>
@@ -55,7 +55,8 @@ const App = ({ getCourses }) =>  {
 }
 
 const mapStateToProps = () => ({
-
+	// token: auth.token,
+	// errMessage: auth.errMessage
 })
 
 const mapDispatchToProps = (dispatch) => ({
