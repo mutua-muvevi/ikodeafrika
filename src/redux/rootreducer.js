@@ -19,7 +19,7 @@ const config = {
 const rootReducer = combineReducers({
 	// auth: authReducer,
 	// user: userReducer,
-	course: coursesReducer
+	courses: coursesReducer
 
 
 });

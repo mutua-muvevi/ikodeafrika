@@ -93,7 +93,7 @@ export const addChapterFail = (errMessage) => ({
 })
 
 
-export const getCourses = (token) => {
+export const getCourses = () => {
 	return async (dispatch) => {
 		try {
 			const res = await axios.get(
@@ -105,6 +105,7 @@ export const getCourses = (token) => {
 				// 	},
 				// }
 			)
+			console.log("ACTION", res)
 			getAllCourses()
 			dispatch(getAllCoursesSuccess(res.data.data))
 		} catch (error) {
