@@ -8,7 +8,7 @@ import { FaHome } from "react-icons/fa";
 
 import Cardtable from "./cardtable";
 import FullTable from "./fulltable";
-import VehicleCards from "./dashboardcards";
+import DashboardCards from "./dashboardcards";
 
 
 const StyledBreadCrumbs = styled(Breadcrumbs)(({theme}) => ({
@@ -36,7 +36,7 @@ const TeacherHome = () => {
 				</Link>
 			</StyledBreadCrumbs>
 
-			<VehicleCards/>
+			<DashboardCards/>
 			<Cardtable/>
 			<FullTable/>
 		</Box>
