@@ -9,8 +9,6 @@ const initialState = {
 }
 
 const coursesReducer = ( state = initialState, { type, payload } ) => {
-	console.log("REDUCER", payload)
-	// debugger
 	switch(type){
 		case coursestypes.GET_ALL_COURSES_START: 
 			return { 

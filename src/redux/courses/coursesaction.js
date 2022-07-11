@@ -105,7 +105,6 @@ export const getCourses = () => {
 				// 	},
 				// }
 			)
-			console.log("ACTION", res)
 			getAllCourses()
 			dispatch(getAllCoursesSuccess(res.data.data))
 		} catch (error) {
