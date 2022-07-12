@@ -90,3 +90,30 @@ export const assignmentInfo = [
 		}
 	},
 ]
+
+export const courseInstructors = [
+	{
+		name: "Instructor One",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		students: 10,
+		courses: 3,
+		reviews: 5,
+		certificates: 4
+	},
+	{
+		name: "Instructor Two",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		students: 14,
+		courses: 2,
+		reviews: 6,
+		certificates: 4
+	},
+	{
+		name: "Instructor Three",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		students: 106,
+		courses: 13,
+		reviews: 50,
+		certificates: 42
+	},
+]

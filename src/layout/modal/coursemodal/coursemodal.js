@@ -63,11 +63,11 @@ const NewCourseModal = ({ open, setOpen, data }) => {
 
 						<StyledModalBody container spacing={3}>
 							<StyledModalCourseMain item xl={8} lg={8} md={12} sm={12} xs={12}>
-								<CourseMain/>
+								<CourseMain data={data}/>
 							</StyledModalCourseMain>
 
 							<StyledModalCourseSide item xl={4} lg={4} md={12} sm={12} xs={12}>
-								<CourseSide/>
+								<CourseSide data={data}/>
 							</StyledModalCourseSide>
 						</StyledModalBody>
 					</Container>

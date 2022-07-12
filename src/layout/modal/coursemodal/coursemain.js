@@ -16,6 +16,11 @@ const StyledCourseMain = styled(Box)(({ theme }) => ({
 
 }))
 
+const styledCourseMain = {
+	overflowY: "scroll !important",
+	height: "84vh !important"
+}
+
 const StyledImageSection = styled(Box)(({theme}) => ({
 
 }))
@@ -59,7 +64,7 @@ function TabPanel(props) {
 		};
 	}
 
-const CourseMain = () => {
+const CourseMain = ({ data }) => {
 
 	const [ value, setValue ] = useState(0);
 	
@@ -68,7 +73,7 @@ const CourseMain = () => {
 	};
 
 	return (
-		<StyledCourseMain>
+		<StyledCourseMain sx={styledCourseMain}>
 			<StyledImageSection>
 				<img
 					src={Image}
@@ -82,24 +87,25 @@ const CourseMain = () => {
 				<Tab label="Curricullum" {...a11yProps(0)} />
 				<Tab label="Reviews" {...a11yProps(1)} />
 				<Tab label="Discussion" {...a11yProps(2)} />
-				<Tab label="Instructor" {...a11yProps(3)} />
+				<Tab label="Instructor(s)" {...a11yProps(3)} />
+				<Tab label="Requirements" {...a11yProps(4)} />
 				</Tabs>
 			</Box>
 
 			<TabPanel value={value} index={0}>
-				<CourseDescription/>
+				<CourseDescription data={data} />
 			</TabPanel>
 
 			<TabPanel value={value} index={1}>
-				<CourseReviews/>
+				<CourseReviews data={data} />
 			</TabPanel>
 			
 			<TabPanel value={value} index={2}>
-				<CourseDiscussion/>
+				<CourseDiscussion data={data} />
 			</TabPanel>
 
 			<TabPanel value={value} index={3}>
-				<CourseInstructor/>
+				<CourseInstructor data={data} />
 			</TabPanel>
 
 		</StyledCourseMain>

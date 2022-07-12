@@ -1,8 +1,25 @@
-import React from 'react'
+import React from 'react';
 
-const CourseDescription = () => {
+import { Box, Typography } from "@mui/material";
+import { styled } from "@mui/system";
+
+const StyledCourseDescription = styled(Box)(({ theme }) => ({
+	margin: "10px auto"
+}))
+
+const StyledParagraph = styled(Box)(({ theme }) => ({
+
+}))
+
+const CourseDescription = ({ data }) => {
 	return (
-		<div>CourseDescription</div>
+		<StyledCourseDescription>
+			<StyledParagraph>
+				<Typography variant="body1" gutterBottom>
+					{ data.description }
+				</Typography>
+			</StyledParagraph>
+		</StyledCourseDescription>
 	)
 }
 
