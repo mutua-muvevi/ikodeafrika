@@ -35,3 +35,85 @@ export const dashboardCards = [
 		}
 	},
 ]
+
+export const assignmentInfo = [
+	{
+		title: "Create a landing system with react",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "completed",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+	{
+		title: "Build a counter with vanilla",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "ongoing",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+	{
+		title: "Build a neuro-network layer and model",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "completed",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+	{
+		title: "Create a data classification system",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "overdue",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+]
+
+export const courseInstructors = [
+	{
+		name: "Instructor One",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		students: 10,
+		courses: 3,
+		reviews: 5,
+		certificates: 4
+	},
+	{
+		name: "Instructor Two",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		students: 14,
+		courses: 2,
+		reviews: 6,
+		certificates: 4
+	},
+	{
+		name: "Instructor Three",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		students: 106,
+		courses: 13,
+		reviews: 50,
+		certificates: 42
+	},
+]

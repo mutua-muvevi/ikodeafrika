@@ -8,7 +8,7 @@ import AssignmentItems from "./assignmentsitems";
 
 
 const StyledCourseSectionContainer = styled(Box)(({ theme }) => ({
-	marginBottom: "10px"
+	margin: "20px auto"
 }))
 
 const CoursesSection = ({course}) => {
