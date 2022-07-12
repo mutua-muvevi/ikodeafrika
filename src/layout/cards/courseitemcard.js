@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Rating, Typography } from "@mui/material";
+import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Rating, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { BsFillCalendarFill } from "react-icons/bs";
@@ -8,6 +8,7 @@ import { FaLevelUpAlt, FaUsers } from "react-icons/fa";
 
 import Code from "../../assets/images/code.jpeg";
 import Author from "../../assets/images/african yut.jpg"
+import CourseModal from "../modal/coursemodal/coursemodal";
 
 const styledPriceFont = {
 	color: "rgba(221, 172, 12, 1)",
@@ -124,80 +125,89 @@ const StyledReviewBox = styled(Box)(({ theme }) => ({
 }))
 
 const CourseItemCard = ({data}) => {
+
+	const [ open, setOpen ] = useState(false)
+
 	return (
-		<StyledCourseItemCard>
-			<StyledCardMedia 
-				component="img"
-				image={Code}
-				alt={data.title}
-			/>
-			<StyledCourseItemContentArea>
-				<StyledAvatarBox >
-					<img
-						alt="Instructor"
-						src={Author}
-						style={styledImage}/>
-					<Typography variant="h4">
-						Instructor's name
-					</Typography>
-				</StyledAvatarBox>
-
-				<StyledCardContent>
-
-					<StyledLeanersContent>
-						<StyledLeanersArea>
-							<FaUsers style={styledLearnersIcon}/>
-							<Typography variant="body2">
-								30 Enrolled
+		<>
+			<StyledCourseItemCard>
+				<CardActionArea onClick={() => setOpen(true)}>
+					<StyledCardMedia 
+						component="img"
+						image={Code}
+						alt={data.title}
+					/>
+					<StyledCourseItemContentArea>
+						<StyledAvatarBox >
+							<img
+								alt="Instructor"
+								src={Author}
+								style={styledImage}/>
+							<Typography variant="h4">
+								Instructor's name
 							</Typography>
-						</StyledLeanersArea>
+						</StyledAvatarBox>
 
-						<StyledDurationArea>
-							<BsFillCalendarFill style={styledLearnersIcon}/>
-							<Typography variant="body2">
-								3 months Duration
-							</Typography>
-						</StyledDurationArea>
+						<StyledCardContent>
 
-						<StyledChipArea>
-							<FaLevelUpAlt style={styledLearnersIcon}/>
-							<Typography variant="body2">
-								{ data.level }
-							</Typography>
-						</StyledChipArea>
-					</StyledLeanersContent>
+							<StyledLeanersContent>
+								<StyledLeanersArea>
+									<FaUsers style={styledLearnersIcon}/>
+									<Typography variant="body2">
+										30 Enrolled
+									</Typography>
+								</StyledLeanersArea>
 
-					<StyledParagraphSection>
-						<Typography variant="h4" gutterBottom style={styledHeaderFont}>
-							{data.title}
-						</Typography>
-						<Typography variant="body1" gutterBottom>
-							{data.description}
-						</Typography>
-					</StyledParagraphSection>
+								<StyledDurationArea>
+									<BsFillCalendarFill style={styledLearnersIcon}/>
+									<Typography variant="body2">
+										3 months Duration
+									</Typography>
+								</StyledDurationArea>
 
+								<StyledChipArea>
+									<FaLevelUpAlt style={styledLearnersIcon}/>
+									<Typography variant="body2">
+										{ data.level }
+									</Typography>
+								</StyledChipArea>
+							</StyledLeanersContent>
 
-					<StyledRatingBox>
-							<StyledReviewBox>
-								<Typography variant="body1" sx={styledNumberStar}>
-									4.3
+							<StyledParagraphSection>
+								<Typography variant="h4" gutterBottom style={styledHeaderFont}>
+									{data.title}
 								</Typography>
-								<Rating
-									name="Course rating"
-									value={4}
-									readOnly
-									sx={{marginLeft: "20px"}}
-									/>
-							</StyledReviewBox>
+								<Typography variant="body1" gutterBottom>
+									{data.description}
+								</Typography>
+							</StyledParagraphSection>
 
-							<Typography variant="body1" sx={styledPriceFont}>
-								40$
-							</Typography>
-						</StyledRatingBox>
 
-				</StyledCardContent>
-			</StyledCourseItemContentArea>
-		</StyledCourseItemCard>
+							<StyledRatingBox>
+									<StyledReviewBox>
+										<Typography variant="body1" sx={styledNumberStar}>
+											4.3
+										</Typography>
+										<Rating
+											name="Course rating"
+											value={4}
+											readOnly
+											sx={{marginLeft: "20px"}}
+											/>
+									</StyledReviewBox>
+
+									<Typography variant="body1" sx={styledPriceFont}>
+										40$
+									</Typography>
+								</StyledRatingBox>
+
+						</StyledCardContent>
+					</StyledCourseItemContentArea>
+				</CardActionArea>
+			</StyledCourseItemCard>
+
+			<CourseModal open={open} setOpen={setOpen} data={data} />
+		</>
 	)
 }
 

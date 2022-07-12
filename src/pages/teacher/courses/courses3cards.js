@@ -22,7 +22,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 const Courses3Cards = () => {
 	return (
 		<StyledCardsContainer>
-			<Grid container spacing={2}>
+			<Grid container spacing={3}>
 				{
 					dashboardCards.map((card, i) => (
 						<Grid key={i} item lg={4} md={4} sm={12} xs={12}>
