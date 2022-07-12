@@ -117,3 +117,48 @@ export const courseInstructors = [
 		certificates: 42
 	},
 ]
+
+export const reviewsList = [
+	{
+		name: "User One",
+		title: "Amazing product",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		date: "01/06/2022",
+		value: 4
+	},
+	{
+		name: "User Two",
+		title: "Super usefull",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		date: "7/04/2022",
+		value: 4
+	},
+	{
+		name: "User Three",
+		title: "This product was awesome",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		date: "10/04/2021",
+		value: 4
+	},
+	{
+		name: "User Four",
+		title: "What a work!",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		date: "02/04/2022",
+		value: 3
+	},
+	{
+		name: "User Five",
+		title: "The best quality",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		date: "10/04/2021",
+		value: 4
+	},
+	{
+		name: "User Six",
+		title: "What kind of product is this?",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+		date: "10/12/2021",
+		value: 1
+	},
+]
