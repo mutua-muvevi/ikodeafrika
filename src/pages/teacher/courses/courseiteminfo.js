@@ -35,3 +35,58 @@ export const dashboardCards = [
 		}
 	},
 ]
+
+export const assignmentInfo = [
+	{
+		title: "Create a landing system with react",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "completed",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+	{
+		title: "Build a counter with vanilla",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "ongoing",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+	{
+		title: "Build a neuro-network layer and model",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "completed",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+	{
+		title: "Create a data classification system",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
+		status: "overdue",
+		start: {
+			date: "03/07/2022",
+			hour: "09:45pm"
+		},
+		end: {
+			date: "03/07/2022",
+			hour: "08:00pm"
+		}
+	},
+]

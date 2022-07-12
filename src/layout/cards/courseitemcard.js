@@ -27,9 +27,6 @@ const styledHeaderFont = {
 	}
 }
 
-const styledContentFont = {
-	
-}
 
 const StyledCourseItemCard = styled(Card)(({ theme }) => ({
 	width: "100%",
