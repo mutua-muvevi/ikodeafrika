@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { Box, Grid, Rating, Typography } from "@mui/material";
+import { Box, Grid, LinearProgress, Rating, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { FaUser } from "react-icons/fa";
-import { BsFillCalendarCheckFill } from "react-icons/bs";
+import { BsFillCalendarCheckFill, BsFillStarFill } from "react-icons/bs";
 
-import { reviewsList } from "../../../pages/teacher/courses/courseiteminfo";
+import { reviewsList, reviewsByNumber } from "../../../pages/teacher/courses/courseiteminfo";
+
 
 const StyledCourseReview = styled(Box)(({ theme }) => ({
 	margin: "20px auto"
@@ -17,7 +18,7 @@ const StyledCourseReviewContent = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledFixedRating = styled(Grid)(({theme}) => ({
-	
+
 }))
 
 const StyledFixedRatingContent = styled(Grid)(({theme}) => ({
@@ -41,9 +42,29 @@ const styledRatingHeaderFont = {
 
 }
 
-const StyledRatingNumberList = styled(Box)(({ theme }) => ({
+const StyledLinearProgressRate = styled(Box)(({ theme }) => ({
+	display: "flex",
+	flexDirection: "column",
+	alignItems: "flex-start",
+	textAlign: "left",
+	width: "100%",
+	margin: "10px auto",
+}));
 
+const StyledLinearProgressRateItem = styled(Box)(({ theme }) => ({
+	display: "flex",
+	alignItems: "center",
+	textAlign: "left",
+	flexGrow: 1,
+	margin: "10px 0",
+	width: "100%"
+}));
+
+const StyledLinearProgressContainer = styled(LinearProgress)(({ theme }) => ({
+	marginLeft: "10px",
+	// width: "100%"
 }))
+
 
 const StyledReviewsList = styled(Grid)(({theme}) => ({
 
@@ -71,11 +92,11 @@ const StyledReviewIconsAreaUnit = styled(Box)(({ theme }) => ({
 }))
 
 const styledIcons = {
-	marginRight: "10px"
+	marginRight: "10px",
+	color: "rgba(238, 193, 3, 1)",
 }
 
 const CourseReviews = () => {
-
 
 	return (
 		<StyledCourseReview>
@@ -93,12 +114,30 @@ const CourseReviews = () => {
 
 					</StyledFixedRatingTop>
 
-
-					5
-					4
-					3
-					2
-					1
+					<StyledLinearProgressRate>
+						{
+							reviewsByNumber &&
+							reviewsByNumber.map((el, i) => (
+								<StyledLinearProgressRateItem key={1}>
+									<Typography variant="body1" sx={{marginRight: "5px"}}>
+										{ el.rateNumber }
+									</Typography>
+									<BsFillStarFill style={styledIcons}/>
+									<Typography variant="body1" sx={{marginRight: "10px"}}>
+										({ el.totalNumbers })
+									</Typography>
+									<StyledLinearProgressContainer sx={{ width: el.value }}>
+										<LinearProgress
+											
+											color="primary"
+											variant="determinate"
+											value={el.value}
+											/>
+									</StyledLinearProgressContainer>
+								</StyledLinearProgressRateItem>
+							))
+						}
+					</StyledLinearProgressRate>
 				</StyledFixedRating>
 
 				<StyledReviewsList item xl={9} lg={9} md={12} sm={12} xs={12}>
