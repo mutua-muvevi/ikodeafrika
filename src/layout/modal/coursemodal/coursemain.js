@@ -11,6 +11,8 @@ import CourseDescription from "./coursedescription";
 import CourseReviews from "./coursereviews";
 import CourseDiscussion from "./coursediscussion";
 import CourseInstructor from "./courseinstructor";
+import CourseRequirements from "./courserequirements";
+import CourseResources from "./courseresources";
 
 const StyledCourseMain = styled(Box)(({ theme }) => ({
 
@@ -89,6 +91,7 @@ const CourseMain = ({ data }) => {
 				<Tab label="Discussion" {...a11yProps(2)} />
 				<Tab label="Instructor(s)" {...a11yProps(3)} />
 				<Tab label="Requirements" {...a11yProps(4)} />
+				<Tab label="Resources" {...a11yProps(4)} />
 				</Tabs>
 			</Box>
 
@@ -106,6 +109,14 @@ const CourseMain = ({ data }) => {
 
 			<TabPanel value={value} index={3}>
 				<CourseInstructor data={data} />
+			</TabPanel>
+
+			<TabPanel value={value} index={4}>
+				<CourseRequirements data={data} />
+			</TabPanel>
+
+			<TabPanel value={value} index={5}>
+				<CourseResources data={data} />
 			</TabPanel>
 
 		</StyledCourseMain>

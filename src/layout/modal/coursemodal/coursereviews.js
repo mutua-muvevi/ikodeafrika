@@ -61,8 +61,7 @@ const StyledLinearProgressRateItem = styled(Box)(({ theme }) => ({
 }));
 
 const StyledLinearProgressContainer = styled(LinearProgress)(({ theme }) => ({
-	marginLeft: "10px",
-	// width: "100%"
+	marginLeft: "10px"
 }))
 
 
