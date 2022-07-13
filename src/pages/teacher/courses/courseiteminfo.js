@@ -162,3 +162,54 @@ export const reviewsList = [
 		value: 1
 	},
 ]
+
+export const reviewsByNumber = [
+	{
+		rateNumber: 5,
+		totalNumbers: 21,
+		value: 66
+	},
+	{
+		rateNumber: 4,
+		totalNumbers: 21,
+		value: 14
+	},
+	{
+		rateNumber: 3,
+		totalNumbers: 21,
+		value: 10
+	},
+	{
+		rateNumber: 2,
+		totalNumbers: 21,
+		value: 7
+	},
+	{
+		rateNumber: 1,
+		totalNumbers: 21,
+		value: 3
+	},
+]
+
+export const requirementsInfo = [
+	{
+		title: "Laptop Unit",
+		items: [
+			"4GB RAM plus",
+			"50GB Free space",
+			"3.3gHz speed processor",
+			"Core i3"
+		]
+	},
+	{
+		title: "Visual studio code",
+		items: []
+	},
+	{
+		title: "Internet",
+		items: [
+			"10 mbps upload speed",
+			"12 mbps download speed",
+		]
+	},
+]
